@@ -1,7 +1,7 @@
 import '@Styles/index.scss';
 
 const App = () => {
-  return <div>asdads</div>;
+  return <div>App</div>;
 };
 
 export default App;
