@@ -1,9 +1,7 @@
-import React from 'react'
+import '@Styles/index.scss';
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  return <div>asdads</div>;
+};
 
-export default App
+export default App;
