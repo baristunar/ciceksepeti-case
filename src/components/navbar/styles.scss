@@ -1,0 +1,120 @@
+@import '@Styles/mixins';
+
+.header {
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 0;
+
+    @include respond-to(large) {
+      padding: 1.25rem 0;
+    }
+
+    &-search {
+      display: none;
+      flex: 1;
+      height: 3.125rem;
+      background-color: var(--gray-100);
+      padding: 0.3125rem 0.3125rem 0.3125rem 1.1875rem;
+      border: 2px solid var(--gray-200);
+      margin: 0 14rem 0 4.9356rem;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 28px;
+
+      @include respond-to(large) {
+        display: flex;
+      }
+
+      &-input {
+        flex: 1;
+        border: none;
+        background-color: transparent;
+        outline: transparent;
+        padding: 0 0.4344rem;
+
+        &,
+        &::placeholder {
+          color: var(--gray-800);
+          font-size: 0.9375rem;
+        }
+      }
+
+      &-btn {
+        background: var(--secondary);
+        font-size: 1.125rem;
+        padding: 0 1.3125rem;
+        height: 100%;
+
+        &:hover {
+          background: var(--white);
+          color: var(--secondary);
+        }
+
+        &:active {
+          background: var(--secondary);
+          color: var(--white);
+        }
+      }
+    }
+
+    &-basket {
+      position: relative;
+
+      &::before {
+        content: attr(data-basket-count);
+        position: absolute;
+        width: 1.5625rem;
+        height: 1.5625rem;
+        background-color: var(--red-200);
+        color: var(--white);
+        border-radius: 9999px;
+        top: -25%;
+        right: 0;
+        transform: translateY(25%);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+    }
+
+    &-responsive-search {
+      border-top: 2px solid var(--gray-200);
+      display: flex;
+      margin: 0;
+
+      .header__top-search {
+        display: flex;
+        margin: 1.25rem 0 0;
+
+        @include respond-to(large) {
+          display: none;
+        }
+      }
+
+      @include respond-to(large) {
+        display: none;
+      }
+    }
+  }
+
+  .header__bottom {
+    background: url(../../assets/images/header-bg.png);
+    padding: 0.9375rem 0;
+    margin-top: 1.3125rem;
+
+    h1 {
+      color: var(--white);
+      font-weight: 400;
+      text-align: center;
+      font-size: 1.5rem;
+
+      @include respond-to(large) {
+        font-size: 2.1875rem;
+        text-align: left;
+      }
+    }
+  }
+}

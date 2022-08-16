@@ -1,7 +1,9 @@
 @import './variables';
 @import './mixins';
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,5 +24,6 @@ a {
 
 button {
   cursor: pointer;
+  border: 1px solid;
   font-family: inherit;
 }

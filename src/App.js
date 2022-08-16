@@ -1,7 +1,11 @@
-import '@Styles/index.scss';
+import Navbar from '@Components/navbar';
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
 export default App;

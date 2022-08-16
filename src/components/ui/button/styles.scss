@@ -1,0 +1,73 @@
+@import '@Styles/mixins';
+
+.btn {
+  color: var(--white);
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  transition: color, background 0.2s ease-in-out;
+
+  padding: .9375rem;
+
+  @include respond-to(medium) {
+    padding: 0.9375rem 2.0625rem 0.7588rem 1.5625rem;
+  }
+
+  &:hover {
+    background: var(--white);
+    color: var(--primary);
+
+    svg,
+    path {
+      fill: var(--primary);
+    }
+  }
+
+  &:active {
+    background: var(--primary);
+    color: var(--white);
+
+    svg,
+    path {
+      fill: var(--white);
+    }
+  }
+
+  svg {
+    margin-right: 0.2244rem;
+  }
+
+  &-outline {
+    border-color: var(--primary);
+    background-color: var(--white);
+    color: var(--primary);
+    border-radius: 22px;
+
+    svg,
+    path {
+      fill: var(--primary);
+    }
+
+    &:hover {
+      background: var(--primary);
+      color: var(--white);
+
+      svg,
+      path {
+        fill: var(--white);
+      }
+    }
+
+    &:active {
+      background: var(--white);
+      color: var(--primary);
+
+      svg,
+      path {
+        fill: var(--primary);
+      }
+    }
+  }
+}

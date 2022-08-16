@@ -1,0 +1,19 @@
+@import '@Styles/mixins';
+
+.container {
+  padding: 0 1rem;
+
+  @include respond-to(medium) {
+    padding: 0 5rem;
+  }
+
+  @include respond-to(large) {
+    padding: 0;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  @include respond-to(xlarge) {
+    max-width: 80vw;
+  }
+}
