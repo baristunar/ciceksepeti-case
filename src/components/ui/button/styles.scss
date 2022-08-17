@@ -8,8 +8,7 @@
   justify-content: center;
   border-radius: 28px;
   transition: color, background 0.2s ease-in-out;
-
-  padding: .9375rem;
+  padding: 0.9375rem;
 
   @include respond-to(medium) {
     padding: 0.9375rem 2.0625rem 0.7588rem 1.5625rem;
@@ -63,6 +62,24 @@
     &:active {
       background: var(--white);
       color: var(--primary);
+
+      svg,
+      path {
+        fill: var(--primary);
+      }
+    }
+  }
+
+  &-ghost {
+    background-color: transparent;
+    color: var(--primary);
+    border: none;
+    padding: 0;
+
+    &:hover,
+    &:active {
+      color: var(--primary);
+      background-color: transparent;
 
       svg,
       path {

@@ -1,0 +1,48 @@
+@import '@Styles/mixins';
+
+.category-filter {
+  &__header {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      margin-left: 10px;
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-weight: 400;
+    }
+  }
+
+  .category-filter__tab {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 0.9375rem;
+    margin-top: 0.625rem;
+    row-gap: 1.1875rem;
+    column-gap: 1.25rem;
+    
+    @include respond-to(medium) {
+      grid-template-columns: repeat(5, 1fr);
+      display: grid;
+    }
+
+    @include respond-to(large) {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    &-button {
+      border-radius: 10px;
+      background-color: var(--white);
+      border: 1px solid var(--gray-300);
+      height: 50px;
+      color: var(--gray-700);
+      padding: 10px;
+
+      &--active {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: var(--white);
+      }
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "categories": [{
+      "id": 1,
+      "name": "Tüm Kategoriler"
+    },
+    {
+      "id": 2,
+      "name": "Elektronik"
+    },
+    {
+      "id": 3,
+      "name": "Ev ve Yaşam"
+    },
+    {
+      "id": 4,
+      "name": "Evcil Hayvan"
+    },
+
+    {
+      "id": 5,
+      "name": "Kitap"
+    },
+    {
+      "id": 6,
+      "name": "Oyuncak"
+    },
+    {
+      "id": 7,
+      "name": "Spor"
+    },
+    {
+      "id": 8,
+      "name": "Çiçek (120)"
+    },
+    {
+      "id": 9,
+      "name": "Hediye"
+    },
+    {
+      "id": 10,
+      "name": "Moda, Aksesuar"
+    },
+    {
+      "id": 11,
+      "name": "Ofis, Kırtasiye"
+    },
+    {
+      "id": 12,
+      "name": "Kişisel Bakım"
+    },
+    {
+      "id": 13,
+      "name": "Parfüm"
+    },
+    {
+      "id": 14,
+      "name": "Petshop"
+    }
+  ],
+
+  "products": [{
+      "id": 1,
+      "title": "Z6 Akıllı Saat Kameralı Konuşma Garantili Sim Kartlı Bluetooth",
+      "free_shipping": true,
+      "image": "watch.png",
+      "price": 399.90,
+      "price_unit": "TL",
+      "category_ids": [3, 10],
+      "stock": 3
+    },
+    {
+      "id": 2,
+      "title": "Calvin Klein Euphoria EDP 100 ml Kadın Parfüm",
+      "free_shipping": false,
+      "image": "parfume.png",
+      "price": 145.61,
+      "price_unit": "TL",
+      "category_ids": [12, 13],
+      "stock": 50
+    },
+    {
+      "id": 3,
+      "title": "Gold Çizgili Vazoda 2 Dal Orkide Çiçeği",
+      "free_shipping": true,
+      "image": "flower-pot.png",
+      "price": 249.90,
+      "price_unit": "TL",
+      "category_ids": [3, 8, 9],
+      "stock": 33
+    },
+    {
+      "id": 4,
+      "title": "925 Ayar Gümüş Çeyreklik Bileklik (Y)",
+      "free_shipping": true,
+      "image": "watch.png",
+      "price": 399.90,
+      "price_unit": "TL",
+      "category_ids": [9, 10],
+      "stock": 5
+    },
+    {
+      "id": 5,
+      "title": "Sailor SD-3160 Siyah Dağcı Seyahat Sırt Çantası 55 LT Outdoor-Trekking",
+      "free_shipping": true,
+      "image": "bag.png",
+      "price": 499.90,
+      "price_unit": "TL",
+      "category_ids": [7, 10, 11],
+      "stock": 22
+    },
+    {
+      "id": 6,
+      "title": "Büyük Boy Metal Osmanlı Bizans Satranç Takımı Parlak ve Ceviz Desenli MDF Ahşap",
+      "free_shipping": true,
+      "image": "chess.png",
+      "price": 19.90,
+      "price_unit": "TL",
+      "category_ids": [6, 9],
+      "stock": 10
+    },
+    {
+      "id": 7,
+      "title": "130 Cm Papyonlu Büyük Ayıcı (%100 Yerli)",
+      "free_shipping": true,
+      "image": "plushy.png",
+      "price": 89.90,
+      "price_unit": "TL",
+      "category_ids": [3, 6, 9],
+      "stock": 1
+    },
+    {
+      "id": 8,
+      "title": "925 Ayar Gümüş Dualı İsimli Nazar İgnesi",
+      "free_shipping": true,
+      "image": "hooked-needle.png",
+      "price": 29.90,
+      "price_unit": "TL",
+      "category_ids": [9, 10],
+      "stock": 5
+    },
+    {
+      "id": 9,
+      "title": "Özel Tatlar Çikolata Kutusu 300 gr",
+      "free_shipping": true,
+      "image": "chocolate.png",
+      "price": 59.90,
+      "price_unit": "TL",
+      "category_ids": [9],
+      "stock": 10
+    },
+    {
+      "id": 10,
+      "title": "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+      "free_shipping": false,
+      "image": "rose.png",
+      "price": 199.90,
+      "price_unit": "TL",
+      "category_ids": [8, 9],
+      "stock": 10
+    },
+    {
+      "id": 11,
+      "title": "Z6 Akıllı Saat Kameralı Konuşma Garantili Sim Kartlı Bluetooth",
+      "free_shipping": true,
+      "image": "watch.png",
+      "price": 399.90,
+      "price_unit": "TL",
+      "category_ids": [3, 10],
+      "stock": 15
+    },
+    {
+      "id": 12,
+      "title": "Calvin Klein Euphoria EDP 100 ml Kadın Parfüm",
+      "free_shipping": false,
+      "image": "parfume.png",
+      "price": 145.61,
+      "price_unit": "TL",
+      "category_ids": [12, 13],
+      "stock": 14
+    },
+    {
+      "id": 13,
+      "title": "Gold Çizgili Vazoda 2 Dal Orkide Çiçeği",
+      "free_shipping": true,
+      "image": "flower-pot.png",
+      "price": 249.90,
+      "price_unit": "TL",
+      "category_ids": [3, 8, 9],
+      "stock": 13
+    },
+    {
+      "id": 14,
+      "title": "925 Ayar Gümüş Çeyreklik Bileklik (Y)",
+      "free_shipping": true,
+      "image": "watch.png",
+      "price": 399.90,
+      "price_unit": "TL",
+      "category_ids": [9, 10],
+      "stock": 12
+    },
+    {
+      "id": 15,
+      "title": "Sailor SD-3160 Siyah Dağcı Seyahat Sırt Çantası 55 LT Outdoor-Trekking",
+      "free_shipping": true,
+      "image": "bag.png",
+      "price": 499.90,
+      "price_unit": "TL",
+      "category_ids": [7, 10, 11],
+      "stock": 15
+    },
+    {
+      "id": 16,
+      "title": "Büyük Boy Metal Osmanlı Bizans Satranç Takımı Parlak ve Ceviz Desenli MDF Ahşap",
+      "free_shipping": true,
+      "image": "chess.png",
+      "price": 19.90,
+      "price_unit": "TL",
+      "category_ids": [6, 9],
+      "stock": 10
+    },
+    {
+      "id": 17,
+      "title": "130 Cm Papyonlu Büyük Ayıcı (%100 Yerli)",
+      "free_shipping": true,
+      "image": "plushy.png",
+      "price": 89.90,
+      "price_unit": "TL",
+      "category_ids": [3, 6, 9],
+      "stock": 10
+    },
+    {
+      "id": 18,
+      "title": "925 Ayar Gümüş Dualı İsimli Nazar İgnesi",
+      "free_shipping": true,
+      "image": "hooked-needle.png",
+      "price": 29.90,
+      "price_unit": "TL",
+      "category_ids": [9, 10],
+      "stock": 10
+    },
+    {
+      "id": 19,
+      "title": "Özel Tatlar Çikolata Kutusu 300 gr",
+      "free_shipping": true,
+      "image": "chocolate.png",
+      "price": 59.90,
+      "price_unit": "TL",
+      "category_ids": [9],
+      "stock": 10
+    },
+    {
+      "id": 20,
+      "title": "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+      "free_shipping": false,
+      "image": "rose.png",
+      "price": 199.90,
+      "price_unit": "TL",
+      "category_ids": [8, 9],
+      "stock": 10
+    }
+  ]
+}

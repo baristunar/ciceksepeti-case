@@ -13,6 +13,7 @@ import { ReactComponent as Shock } from '@Assets/icons/shock.svg';
 import { ReactComponent as Youtube } from '@Assets/icons/youtube.svg';
 import { ReactComponent as GooglePlay } from '@Assets/icons/google-play.svg';
 import { ReactComponent as AppStore } from '@Assets/icons/app-store.svg';
+import { ReactComponent as Minus } from '@Assets/icons/minus-solid.svg';
 
 const IconComponent = ({ name, ...props }) => {
   const iconTypes = {
@@ -30,6 +31,7 @@ const IconComponent = ({ name, ...props }) => {
     youtube: Youtube,
     googlePlay: GooglePlay,
     appStore: AppStore,
+    minus: Minus
   };
 
   let Icon = iconTypes[name];

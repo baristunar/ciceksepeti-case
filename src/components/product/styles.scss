@@ -1,0 +1,129 @@
+@import '@Styles/mixins';
+
+.product {
+  &__list {
+    &-wrapper {
+      margin-top: 0.625rem;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+
+      @include respond-to(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.875rem;
+      }
+
+      @include respond-to(large) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include respond-to(xlarge) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 0.3125rem;
+        color: var(--gray-700);
+        font-weight: 300;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__item {
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+    padding: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &-title {
+      margin-top: 0.25rem;
+      color: var(--gray-800);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &-cargo {
+      margin-top: 0.125rem;
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: 0.9375rem;
+
+      &--invisible {
+        visibility: hidden;
+      }
+    }
+
+    &-price {
+      margin-top: 2px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    &-btn {
+      border: 1px solid var(--primary);
+      background-color: var(--white);
+      color: var(--primary);
+      padding: 10px 0 11px 0;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 0.1875rem;
+      border-radius: 22px;
+      transition: color, background 0.2s ease-in-out;
+
+      &:hover {
+        background-color: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+      }
+
+      &-count {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.3125rem;
+        border: 1px solid var(--gray-300);
+        border-radius: 25px;
+        margin-top: 0.1875rem;
+
+        button {
+          width: 1.875rem;
+          height: 1.875rem;
+          border-radius: 9999px;
+          background-color: var(--blue-light);
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          border: none;
+
+          span {
+            color: var(--gray-800);
+            font-weight: 900;
+            font-size: 1.375rem;
+          }
+
+          svg:first-child {
+            fill: var(--primary-300);
+            width: 0.9375rem;
+            height: 0.9375rem;
+          }
+        }
+      }
+    }
+  }
+}

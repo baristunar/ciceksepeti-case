@@ -1,0 +1,16 @@
+.breadcrumb {
+  padding: 0.625rem 0;
+
+  &__link {
+    color: var(--gray-800);
+    font-size: 0.8125rem;
+
+    &--active {
+      color: var(--secondary);
+    }
+  }
+
+  &__bracket {
+    padding: 0 0.3125rem;
+  }
+}

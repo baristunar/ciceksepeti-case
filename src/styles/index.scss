@@ -27,3 +27,11 @@ button {
   border: 1px solid;
   font-family: inherit;
 }
+
+.main {
+  padding-bottom: 3.125rem;
+
+  @include respond-to(large) {
+    padding-bottom: 6.5625rem;
+  }
+}

@@ -6,14 +6,19 @@ export const Button = ({
   onClick,
   className,
   text,
-  outline = false,
+  type = 'default',
   icon,
   ...props
 }) => {
+  const buttonTypes = {
+    ghost: 'ghost',
+    outline: 'outline',
+    default: 'default'
+  };
   return (
     <button
       onClick={onClick}
-      className={`btn ${outline ? 'btn-outline' : ''} ${className}`}
+      className={`btn btn-${buttonTypes[type]} ${className}`}
       {...props}
       data-basket-count="5"
     >
@@ -28,5 +33,6 @@ Button.propTypes = {
   icon: PropTypes.string,
   outline: PropTypes.bool,
   onClick: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
+  type: PropTypes.oneOf(['default', 'outline', 'ghost'])
 };
