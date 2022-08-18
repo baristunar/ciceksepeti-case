@@ -15,6 +15,11 @@ const BREADCRUMB_LIST = [
 const App = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [activeCategory, setActiveCategory] = useState(1);
+
+  const categoryOnChange = (categoryID) => {
+    setActiveCategory(categoryID);
+  };
 
   const getProducts = async () => {
     const products = await fetchProducts();
@@ -46,11 +51,14 @@ const App = () => {
     <div>
       <Navbar />
 
-      <main className='main'>
+      <main className="main">
         <Container>
           <Breadcrumb content={BREADCRUMB_LIST} />
-          <CategoryFilter categories={categories} />
-          <ProductList products={products} />
+          <CategoryFilter
+            categoryOnChange={categoryOnChange}
+            categories={categories}
+          />
+          <ProductList activeCategory={activeCategory} products={products} />
         </Container>
       </main>
     </div>

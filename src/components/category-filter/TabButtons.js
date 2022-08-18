@@ -2,11 +2,12 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@Components/ui';
 
-const TabButtons = ({ categories }) => {
+const TabButtons = ({ categories, categoryOnChange }) => {
   const [activeTab, setActiveTab] = useState(1);
 
   const onClickHandler = (categoryID) => {
     setActiveTab(categoryID);
+    categoryOnChange(categoryID);
   };
 
   return (
@@ -30,7 +31,8 @@ const TabButtons = ({ categories }) => {
 };
 
 TabButtons.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.object).isRequired
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  categoryOnChange: PropTypes.func.isRequired
 };
 
 export default TabButtons;
