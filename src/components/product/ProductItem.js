@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Icon from '@Components/Icon';
@@ -30,6 +30,12 @@ const ProductItem = ({ product }) => {
       dispatch(removeProduct({ ...product, quantity: 1 }));
     }
   };
+
+  useEffect(() => {
+    if (quantity === 0) {
+      setIsButtonActive(false);
+    }
+  }, [quantity]);
 
   return (
     <>
