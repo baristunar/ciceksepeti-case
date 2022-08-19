@@ -20,7 +20,6 @@ export const Button = ({
       onClick={onClick}
       className={`btn btn-${buttonTypes[type]} ${className}`}
       {...props}
-      data-basket-count="5"
     >
       {icon ? <Icon name={icon} /> : null}
       {text ? <span>{text}</span> : null}

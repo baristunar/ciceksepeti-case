@@ -1,26 +1,33 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import Icon from '@Components/Icon';
+import { addProduct, removeProduct } from '@Store/basket';
 
 const ProductItem = ({ product }) => {
   const [isButtonActive, setIsButtonActive] = useState(false);
-  const [count, setCount] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+  const dispatch = useDispatch();
 
-  const onClickHandler = () => {
+  const onClickHandler = ({ product }) => {
     setIsButtonActive(!isButtonActive);
 
     if (product?.stock > 0) {
-      setCount(count + 1);
+      setQuantity(quantity + 1);
+      dispatch(addProduct({ ...product, quantity: 1 }));
     }
   };
 
-  const countOnClickHandler = (type) => {
-    if (type === 'increment' && count < product?.stock) {
-      setCount(count + 1);
+  const quantityOnClickHandler = ({ type, product }) => {
+    if (type === 'increment' && quantity < product?.stock) {
+      setQuantity(quantity + 1);
+
+      dispatch(addProduct({ ...product, quantity: 1 }));
     }
 
-    if (type === 'decrement' && count > 0) {
-      setCount(count - 1);
+    if (type === 'decrement' && quantity > 0) {
+      setQuantity(quantity - 1);
+      dispatch(removeProduct({ ...product, quantity: 1 }));
     }
   };
 
@@ -50,17 +57,28 @@ const ProductItem = ({ product }) => {
           </p>
 
           {isButtonActive ? (
-            <div className="product__item-btn-count">
-              <button onClick={() => countOnClickHandler('decrement')}>
+            <div className="product__item-btn-quantity">
+              <button
+                onClick={() =>
+                  quantityOnClickHandler({ type: 'decrement', product })
+                }
+              >
                 <Icon name="minus" />
               </button>
-              <span>{count}</span>
-              <button onClick={() => countOnClickHandler('increment')}>
+              <span>{quantity}</span>
+              <button
+                onClick={() =>
+                  quantityOnClickHandler({ type: 'increment', product })
+                }
+              >
                 <Icon name="plus" />
               </button>
             </div>
           ) : (
-            <button className="product__item-btn" onClick={onClickHandler}>
+            <button
+              className="product__item-btn"
+              onClick={() => onClickHandler({ product })}
+            >
               <span>Sepete Ekle</span>
             </button>
           )}

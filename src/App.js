@@ -26,10 +26,14 @@ const App = () => {
 
     const data = products?.data.map((product) => {
       return {
-        ...product,
+        id: product.id,
         priceUnit: product.price_unit,
         freeShipping: product.free_shipping,
-        categoryIDS: product.category_ids
+        categoryIDS: product.category_ids,
+        image: product.image,
+        stock: product.stock,
+        title: product.title,
+        price: product.price
       };
     });
 
