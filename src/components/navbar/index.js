@@ -3,6 +3,7 @@ import './styles.scss';
 import Icon from '@Components/Icon';
 import { Container, Button } from '@Components/ui';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const FREE_CARGO_AMOUNT = 500;
 const FREE_SHIPPING_SUCCESS_TEXT = 'Kargonuz Bedava';
@@ -16,6 +17,25 @@ const INITIAL_SHIPPING = {
 const Navbar = () => {
   const basket = useSelector((state) => state.basket);
   const [shipping, setShipping] = useState({ ...INITIAL_SHIPPING });
+  const [searchText, setSearchText] = useState('');
+  const navigate = useNavigate();
+
+  const searchOnChangeHandler = (e) => {
+    setSearchText(e.target.value);
+  };
+
+  const searchOnPressEnter = (e) => {
+    if (e.key === 'Enter') searchingHandler();
+  };
+
+  const searchingHandler = () => {
+    if (searchText.length >= 3) {
+      navigate({
+        pathname: '/',
+        search: `?name=${searchText}`
+      });
+    }
+  };
 
   const shippingPriceHandler = () => {
     if (basket.totalPrice >= FREE_CARGO_AMOUNT) {
@@ -57,8 +77,15 @@ const Navbar = () => {
               className="header__top-search-input"
               type="text"
               placeholder="Ürün Ara"
+              value={searchText}
+              onChange={searchOnChangeHandler}
+              onKeyDown={searchOnPressEnter}
             />
-            <Button text="Ara" className="header__top-search-btn" />
+            <Button
+              text="Ara"
+              className="header__top-search-btn"
+              onClick={searchingHandler}
+            />
           </div>
 
           <div className="header__top-basket-wrapper">
@@ -94,10 +121,18 @@ const Navbar = () => {
             <Icon name="search" />
             <input
               className="header__top-search-input"
-              type="text"
               placeholder="Ürün Ara"
+              name="search"
+              id="search"
+              value={searchText}
+              onChange={searchOnChangeHandler}
+              onKeyDown={searchOnPressEnter}
             />
-            <Button text="Ara" className="header__top-search-btn" />
+            <Button
+              text="Ara"
+              className="header__top-search-btn"
+              onClick={searchingHandler}
+            />
           </div>
         </div>
       </Container>

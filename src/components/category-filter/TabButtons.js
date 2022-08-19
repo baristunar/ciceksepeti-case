@@ -1,13 +1,21 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '@Components/ui';
+import { useSearchParams } from 'react-router-dom';
 
 const TabButtons = ({ categories, categoryOnChange }) => {
   const [activeTab, setActiveTab] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const onClickHandler = (categoryID) => {
+    const isSearchParamsExist = searchParams.has('name');
     setActiveTab(categoryID);
     categoryOnChange(categoryID);
+
+    if (isSearchParamsExist) {
+      searchParams.delete('name');
+      setSearchParams(searchParams);
+    }
   };
 
   return (

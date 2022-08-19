@@ -1,26 +1,45 @@
-import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import './styles.scss';
+import PropTypes from 'prop-types';
 import ProductItem from './ProductItem';
 import Icon from '@Components/Icon';
-import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const ProductList = ({ products, activeCategory }) => {
   const [filteredProducts, setFilteredProducts] = useState(products);
+  const [searchParams] = useSearchParams();
 
-  const filterProducts = () => {
+  const filterByCategory = () => {
     if (activeCategory === 1) {
       setFilteredProducts(products);
     } else {
       const filteredData = products.filter((product) =>
-        product.categoryIDS.includes(activeCategory)
+        product?.categoryIDS?.includes(activeCategory)
       );
       setFilteredProducts(filteredData);
     }
   };
 
+  const filterByText = (searchValue) => {
+    setFilteredProducts(
+      products.filter((product) => {
+        const productName = product?.title.toLowerCase();
+        const isExist = productName.includes(searchValue?.toLowerCase());
+
+        if (isExist) return product;
+      })
+    );
+  };
+
   useEffect(() => {
-    filterProducts();
-  }, [products, activeCategory]);
+    const searchValue = searchParams.get('name');
+
+    if (searchValue) {
+      filterByText(searchValue);
+    } else {
+      filterByCategory();
+    }
+  }, [searchParams, products, activeCategory]);
 
   return (
     <div className="product__list">
