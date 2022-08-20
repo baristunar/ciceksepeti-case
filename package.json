@@ -23,7 +23,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "craco start json-server --watch db.json --port 3001",
     "start:json-server": "json-server --watch db.json --port 3001",
     "build": "craco build",
     "test": "craco test",
