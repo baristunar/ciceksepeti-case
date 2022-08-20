@@ -17,10 +17,10 @@ const BREADCRUMB_LIST = [
 const App = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [activeCategory, setActiveCategory] = useState(1);
+  const [activeCategory, setActiveCategory] = useState({ id: 1 });
 
-  const categoryOnChange = (categoryID) => {
-    setActiveCategory(categoryID);
+  const categoryOnChange = (category) => {
+    setActiveCategory(category);
   };
 
   const getProducts = async () => {

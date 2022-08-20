@@ -10,11 +10,11 @@ const ProductList = ({ products, activeCategory }) => {
   const [searchParams] = useSearchParams();
 
   const filterByCategory = () => {
-    if (activeCategory === 1) {
+    if (activeCategory.id === 1) {
       setFilteredProducts(products);
     } else {
       const filteredData = products.filter((product) =>
-        product?.categoryIDS?.includes(activeCategory)
+        product?.categoryIDS?.includes(activeCategory.id)
       );
       setFilteredProducts(filteredData);
     }
@@ -45,7 +45,7 @@ const ProductList = ({ products, activeCategory }) => {
     <div className="product__list">
       <h3 className="product__list-title">
         <Icon name="leaf" />
-        <span>Tüm Kategoriler</span>
+        <span>{activeCategory.id === 1 ? "Tüm Kategoriler" : activeCategory?.name}</span>
       </h3>
 
       {filteredProducts.length > 0 ? (
@@ -64,7 +64,7 @@ const ProductList = ({ products, activeCategory }) => {
 };
 
 ProductList.propTypes = {
-  activeCategory: PropTypes.number.isRequired,
+  activeCategory: PropTypes.object.isRequired,
   products: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,

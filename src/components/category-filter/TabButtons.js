@@ -7,10 +7,10 @@ const TabButtons = ({ categories, categoryOnChange }) => {
   const [activeTab, setActiveTab] = useState(1);
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const onClickHandler = (categoryID) => {
+  const onClickHandler = (category) => {
     const isSearchParamsExist = searchParams.has('name');
-    setActiveTab(categoryID);
-    categoryOnChange(categoryID);
+    setActiveTab(category.id);
+    categoryOnChange(category);
 
     if (isSearchParamsExist) {
       searchParams.delete('name');
@@ -29,7 +29,7 @@ const TabButtons = ({ categories, categoryOnChange }) => {
                 : ''
             }`}
             key={category.id}
-            onClick={() => onClickHandler(category.id)}
+            onClick={() => onClickHandler(category)}
             text={category.name}
           />
         );
