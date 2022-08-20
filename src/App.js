@@ -5,6 +5,7 @@ import Breadcrumb from '@Components/breadcrumb';
 import { Container } from '@Components/ui/';
 import CategoryFilter from '@Components/category-filter';
 import ProductList from '@Components/product/ProductList';
+import Campaigns from '@Components/campaigns';
 import { fetchCategories, fetchProducts } from './services';
 
 const BREADCRUMB_LIST = [
@@ -65,6 +66,7 @@ const App = () => {
           />
           <ProductList activeCategory={activeCategory} products={products} />
         </Container>
+        <Campaigns />
       </main>
 
       <Footer />
