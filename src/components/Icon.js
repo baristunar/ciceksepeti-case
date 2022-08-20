@@ -7,13 +7,13 @@ import { ReactComponent as Instagram } from '@Assets/icons/instagram.svg';
 import { ReactComponent as Leaf } from '@Assets/icons/leaf.svg';
 import { ReactComponent as Logo } from '@Assets/icons/logo.svg';
 import { ReactComponent as MenuList } from '@Assets/icons/menu-list.svg';
-import { ReactComponent as Pencil } from '@Assets/icons/pencil.svg';
+import { ReactComponent as Blog } from '@Assets/icons/blog.svg';
 import { ReactComponent as Plus } from '@Assets/icons/plus.svg';
 import { ReactComponent as Shock } from '@Assets/icons/shock.svg';
 import { ReactComponent as Youtube } from '@Assets/icons/youtube.svg';
-import { ReactComponent as GooglePlay } from '@Assets/icons/google-play.svg';
-import { ReactComponent as AppStore } from '@Assets/icons/app-store.svg';
 import { ReactComponent as Minus } from '@Assets/icons/minus-solid.svg';
+import { ReactComponent as ChevronDown } from '@Assets/icons/chevron-down.svg';
+import { ReactComponent as ChevronUp } from '@Assets/icons/chevron-up.svg';
 
 const IconComponent = ({ name, ...props }) => {
   const iconTypes = {
@@ -25,13 +25,13 @@ const IconComponent = ({ name, ...props }) => {
     leaf: Leaf,
     logo: Logo,
     menuList: MenuList,
-    pencil: Pencil,
+    blog: Blog,
     plus: Plus,
     shock: Shock,
     youtube: Youtube,
-    googlePlay: GooglePlay,
-    appStore: AppStore,
-    minus: Minus
+    minus: Minus,
+    chevronDown: ChevronDown,
+    chevronUp: ChevronUp
   };
 
   let Icon = iconTypes[name];

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from '@Components/navbar';
+import Footer from '@Components/footer';
 import Breadcrumb from '@Components/breadcrumb';
 import { Container } from '@Components/ui/';
 import CategoryFilter from '@Components/category-filter';
@@ -52,7 +53,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Navbar />
 
       <main className="main">
@@ -65,7 +66,9 @@ const App = () => {
           <ProductList activeCategory={activeCategory} products={products} />
         </Container>
       </main>
-    </div>
+
+      <Footer />
+    </>
   );
 };
 
