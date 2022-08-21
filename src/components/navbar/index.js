@@ -116,7 +116,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <div className="header__top-responsive-search">
+        <div className={`header__top-responsive-search ${basket.totalQuantity > 0 && `--cart-bar-active`}`}>
           <div className="header__top-search">
             <Icon name="search" />
             <input

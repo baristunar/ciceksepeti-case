@@ -1,60 +1,74 @@
 {
     "categories": [{
             "id": 1,
-            "name": "Tüm Kategoriler"
+            "name": "Tüm Kategoriler",
+            "href": "/"
         },
         {
             "id": 2,
-            "name": "Elektronik"
+            "name": "Elektronik",
+            "href": "/"
         },
         {
             "id": 3,
-            "name": "Ev ve Yaşam"
+            "name": "Ev ve Yaşam",
+            "href": "/"
         },
         {
             "id": 4,
-            "name": "Evcil Hayvan"
+            "name": "Evcil Hayvan",
+            "href": "/"
         },
 
         {
             "id": 5,
-            "name": "Kitap"
+            "name": "Kitap",
+            "href": "/"
         },
         {
             "id": 6,
-            "name": "Oyuncak"
+            "name": "Oyuncak",
+            "href": "/"
         },
         {
             "id": 7,
-            "name": "Spor"
+            "name": "Spor",
+            "href": "/"
         },
         {
             "id": 8,
-            "name": "Çiçek"
+            "name": "Çiçek",
+            "href": "/"
         },
         {
             "id": 9,
-            "name": "Hediye"
+            "name": "Hediye",
+            "href": "/"
         },
         {
             "id": 10,
-            "name": "Moda, Aksesuar"
+            "name": "Moda, Aksesuar",
+            "href": "/"
         },
         {
             "id": 11,
-            "name": "Ofis, Kırtasiye"
+            "name": "Ofis, Kırtasiye",
+            "href": "/"
         },
         {
             "id": 12,
-            "name": "Kişisel Bakım"
+            "name": "Kişisel Bakım",
+            "href": "/"
         },
         {
             "id": 13,
-            "name": "Parfüm"
+            "name": "Parfüm",
+            "href": "/"
         },
         {
             "id": 14,
-            "name": "Petshop"
+            "name": "Petshop",
+            "href": "/"
         }
     ]
 }

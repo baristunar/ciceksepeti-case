@@ -45,7 +45,7 @@ const ProductList = ({ products, activeCategory }) => {
     <div className="product__list">
       <h3 className="product__list-title">
         <Icon name="leaf" />
-        <span>{activeCategory.id === 1 ? "Tüm Kategoriler" : activeCategory?.name}</span>
+        <span>{ activeCategory?.name}</span>
       </h3>
 
       {filteredProducts.length > 0 ? (

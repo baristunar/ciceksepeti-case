@@ -10,14 +10,17 @@ import { fetchCategories, fetchProducts } from './services';
 
 const BREADCRUMB_LIST = [
   { title: 'Çiçeksepeti Market', href: '/' },
-  { title: 'İstanbul', href: '/' },
-  { title: 'Çiçeksepeti Breadcrumb', href: '/' }
+  { title: 'İstanbul', href: '/' }
 ];
 
 const App = () => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [activeCategory, setActiveCategory] = useState({ id: 1 });
+  const [activeCategory, setActiveCategory] = useState({
+    id: 1,
+    name: 'Tüm Kategoriler',
+    href: '/'
+  });
 
   const categoryOnChange = (category) => {
     setActiveCategory(category);
@@ -59,7 +62,12 @@ const App = () => {
 
       <main className="main">
         <Container>
-          <Breadcrumb content={BREADCRUMB_LIST} />
+          <Breadcrumb
+            content={[
+              ...BREADCRUMB_LIST,
+              { title: activeCategory.name, href: activeCategory.href }
+            ]}
+          />
           <CategoryFilter
             categoryOnChange={categoryOnChange}
             categories={categories}
