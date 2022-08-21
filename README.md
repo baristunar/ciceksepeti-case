@@ -27,8 +27,6 @@ Install dependencies `yarn install`
 
 Starting local server `yarn start`
 
-Starting Json server `yarn start:json-server`
-
 Build `yarn build`
 
 
