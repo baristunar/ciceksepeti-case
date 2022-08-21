@@ -25,8 +25,6 @@ Clone project to your computer `git clone https://github.com/baristunar/ciceksep
 
 Install dependencies `yarn install`
 
-Copy .env file `cp .env.example .env`
-
 Starting local server `yarn start`
 
 Starting Json server `yarn start:json-server`
