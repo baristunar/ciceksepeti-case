@@ -18,7 +18,9 @@
 
 ## Setup
 
-Clone project to your computer `git clone https://github.com/baristunar/ciceksepet-case` NOTE:Repository is private right now.
+Clone project to your computer `git clone https://github.com/baristunar/ciceksepet-case` 
+
+NOTE: Repository is private right now.
 
 Install dependencies `yarn install`
 
