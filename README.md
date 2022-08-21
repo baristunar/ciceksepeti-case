@@ -6,6 +6,16 @@
 
 * https://ciceksepet-case.vercel.app/
 
+## Setup
+
+Clone project to your computer `git clone https://github.com/baristunar/ciceksepet-case` 
+
+Install dependencies `yarn install`
+
+Starting local server `yarn start`
+
+Build `yarn build`
+
 ## Goals
 
 - [x] Responsive Design
@@ -18,17 +28,6 @@
 * [React](https://en.reactjs.org/)
 * [SASS](https://sass-lang.com/)
 * [Axios](https://axios-http.com/docs/intro)
-
-## Setup
-
-Clone project to your computer `git clone https://github.com/baristunar/ciceksepet-case` 
-
-Install dependencies `yarn install`
-
-Starting local server `yarn start`
-
-Build `yarn build`
-
 
 ## Contact me
 
