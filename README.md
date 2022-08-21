@@ -2,6 +2,10 @@
 
 <img src="./ciceksepeti-screen.png" />
 
+## Deployment
+
+* https://ciceksepet-case.vercel.app/
+
 ## Goals
 
 - [x] Responsive Design
@@ -14,13 +18,10 @@
 * [React](https://en.reactjs.org/)
 * [SASS](https://sass-lang.com/)
 * [Axios](https://axios-http.com/docs/intro)
-* [Json-Server Fake API](https://github.com/typicode/json-server)
 
 ## Setup
 
 Clone project to your computer `git clone https://github.com/baristunar/ciceksepet-case` 
-
-NOTE: Repository is private right now.
 
 Install dependencies `yarn install`
 
