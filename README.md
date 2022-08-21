@@ -4,7 +4,7 @@
 
 ## Deployment
 
-* https://ciceksepet-case.vercel.app/
+* https://ciceksepeti-case-ten.vercel.app/
 
 ## Setup
 
