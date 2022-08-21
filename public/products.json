@@ -6,7 +6,7 @@
             "image": "watch.png",
             "price": 399.90,
             "price_unit": "TL",
-            "category_ids": [3, 10],
+            "category_ids": [2],
             "stock": 3
         },
         {
@@ -16,7 +16,7 @@
             "image": "parfume.png",
             "price": 145.61,
             "price_unit": "TL",
-            "category_ids": [12, 13],
+            "category_ids": [9, 12, 13],
             "stock": 50
         },
         {
@@ -26,7 +26,7 @@
             "image": "flower-pot.png",
             "price": 249.90,
             "price_unit": "TL",
-            "category_ids": [3, 8, 9],
+            "category_ids": [8, 9],
             "stock": 33
         },
         {
@@ -46,7 +46,7 @@
             "image": "bag.png",
             "price": 499.90,
             "price_unit": "TL",
-            "category_ids": [7, 10, 11],
+            "category_ids": [7, 11],
             "stock": 22
         },
         {
@@ -56,7 +56,7 @@
             "image": "chess.png",
             "price": 19.90,
             "price_unit": "TL",
-            "category_ids": [6, 9],
+            "category_ids": [6],
             "stock": 10
         },
         {
@@ -106,7 +106,7 @@
             "image": "watch.png",
             "price": 399.90,
             "price_unit": "TL",
-            "category_ids": [3, 10],
+            "category_ids": [2],
             "stock": 15
         },
         {
@@ -116,7 +116,7 @@
             "image": "parfume.png",
             "price": 145.61,
             "price_unit": "TL",
-            "category_ids": [12, 13],
+            "category_ids": [9, 12, 13],
             "stock": 14
         },
         {
@@ -126,7 +126,7 @@
             "image": "flower-pot.png",
             "price": 249.90,
             "price_unit": "TL",
-            "category_ids": [3, 8, 9],
+            "category_ids": [8, 9],
             "stock": 13
         },
         {
@@ -156,7 +156,7 @@
             "image": "chess.png",
             "price": 19.90,
             "price_unit": "TL",
-            "category_ids": [6, 9],
+            "category_ids": [6],
             "stock": 10
         },
         {
