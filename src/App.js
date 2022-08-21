@@ -26,7 +26,7 @@ const App = () => {
   const getProducts = async () => {
     const products = await fetchProducts();
 
-    const data = products?.data.map((product) => {
+    const data = products?.data?.products?.map((product) => {
       return {
         id: product.id,
         priceUnit: product.price_unit,
@@ -39,13 +39,13 @@ const App = () => {
       };
     });
 
-    setProducts(data || []);
+    setProducts(data);
   };
 
   const getCategories = async () => {
     const categories = await fetchCategories();
 
-    setCategories(categories?.data);
+    setCategories(categories?.data?.categories);
   };
 
   useEffect(() => {

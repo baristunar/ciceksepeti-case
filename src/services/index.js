@@ -1,10 +1,9 @@
-import { axiosInstance } from '@Utils/axios-instance';
-import URLS from './urls';
+import axios from 'axios';
 
 export const fetchProducts = () => {
-  return axiosInstance.get(URLS.product);
+  return axios.get('products.json');
 };
 
 export const fetchCategories = () => {
-  return axiosInstance.get(URLS.categories);
+  return axios.get('categories.json');
 };
